@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta comigo</title>
+
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/7279f114a5.js" crossorigin="anonymous"></script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--Ícone-->
+    <link rel="icon" type="imagem/png" href="./imagens/ICO SITE.png">
+
+</head>
+<body class="fundo-monstros">
+    <!--Modal getName-->
+    <div class="modal fade" id="nome-modal" tabindex="-1" role="dialog" aria-labelledby="Qual o seu nome?" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal" role="document">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-md-12" id="saudacao-modal">
+                        <div class="justify-content-center">
+                            <h2>Oi! Estava ansioso pra te ver!</h2>
+                        </div>
+                        <div class="col-md-12" id="img-modal"></div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="pergunta-modal">Qual o seu nome ?</span>
+                            </div>
+                            <input type="text" id="getNome" class="form-control" maxlength="15">
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-primary btn-lg main-btn" data-dismiss="modal" onclick="getNome()" id="btnSalvar">Salvar</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <!--Modal Historia-->
+    <div class="modal fade" id="historia-sentimentos-modal" tabindex="-1" role="dialog" aria-labelledby="Sentimentos" aria-hidden="true" data-backdrop="static">
+        <button data-target="#sentimentos-carousel" data-slide-to="0" class="btn-fecharModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                    <div class="col-md-12" id="titulo-historia-sentimentos">
+                        <div class="justify-content-center">
+                            <h2><span>Hey, </span><span id="nome"></span><span><br>Não fique assim!</span></h2>
+                        </div>
+                        <div class="col-md-12" id="historia-sentimentos">
+                            <div class="carousel slide" id="sentimentos-carousel" data-ride="carousel" data-interval="0">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./imagens/sentimentos/tristeza/1.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/2.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/3.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/4.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/5.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/6.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/7.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/8.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/9.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/10.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./imagens/sentimentos/tristeza/11.png" alt="História tristeza" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>                                
+                        </div>
+                        <div class="modal-footer justify-content-around" id="box-modal-btn-historia">
+                           <button href="#sentimentos-carousel" data-slide="next" type="button" class="btn btn-primary btn-lg main-btn" id="btnComecar">Começar</button>
+                           <button href="#sentimentos-carousel" data-slide="prev" type="button" class="btn btn-primary btn-lg main-btn" id="btnVoltar"><i class="fa fa-hand-o-left" aria-hidden="true"></i></button>
+                           <button href="#sentimentos-carousel" data-slide="next" type="button" class="btn btn-primary btn-lg main-btn" id="btnProximo"><i class="fa fa-hand-o-right" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>    
+    <!--Navbar-->
+    <div class="container-fluid">
+        <header>
+            <div class="container" id="nav-container">
+                <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+                    <div id="logo">
+                        <a href="./index.html">
+                            <img src="./imagens/ICO SITE.png" class="nav-img" alt="Logo">
+                        </a>
+                        <h3>Início</h3>
+                    </div> 
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle avigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-around" id="navbar-links">
+                        <div class="navbar-nav">
+                            <a href="./comoMeSinto.html" class="nav-item nav-link" id="comeMeSinto-menu">Como me sinto</a>
+                            <a href="#" class="nav-item nav-link" id="meContaUmConto-menu">Me conta um conto</a>
+                            <a href="./desbravador.html" class="nav-item nav-link" id="desbravador-menu">Desbravador</a>
+                            <a href="#" class="nav-item nav-link" id="perfil-menu">Meu Perfil</a>
+                        </div>
+                    </div>
+                    <div id="div-perfil">
+                        <img src="./imagens/perfil.png" class="nav-img" alt="Meu perfil">
+                        <h3>Meu perfil</h3>
+                    </div> 
+                </nav>
+            </div>
+        </header>
+        <!--Seleção Sentimentos-->
+        <main>
+            <div class="container" id="emocoes-container">
+                <div class="container">
+                    <h2>Como você está se sentindo hoje ?</h2>
+                </div>
+                <div class="container" id="selectEmocoes">
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">
+                            <a href="#" id="select-feliz">
+                                <div class="card">
+                                    <img class="select-img" src="./imagens/feliz.png" alt="feliz">
+                                    <div class="card-body">
+                                        <h3>FELIZ</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" id="select-cansado">
+                                <div class="card">
+                                    <img class="select-img" src="./imagens/cansado.png" alt="feliz">
+                                    <div class="card-body">
+                                        <h3>CANSADO</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" id="select-triste">
+                                <div class="card">
+                                    <img class="select-img" src="./imagens/triste.png" alt="feliz">
+                                    <div class="card-body">
+                                        <h3>TRISTE</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" id="select-empolgado">
+                                <div class="card">
+                                    <img class="select-img" src="./imagens/empolgado.png" alt="feliz">
+                                    <div class="card-body">
+                                        <h3>EMPOLGADO</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">
+                            <a href="#" id="select-nervoso">
+                                <div class="card">
+                                    <img class="select-img" src="./imagens/nervoso.png" alt="feliz">
+                                    <div class="card-body">
+                                        <h3>NERVOSO</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" id="select-entediado">
+                                <div class="card">
+                                    <img class="select-img" src="./imagens/entediado.png" alt="feliz">
+                                    <div class="card-body">
+                                        <h3>ENTEDIADO</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>                        
+                </div>
+            </div>            
+        </main>
+        <!--Footer-->
+        <div class="container-fluid">
+            <footer class="col-12">
+                <section class="d-flex justify-content-around" id="footer-section">
+                    <div class="f-box-links">
+                        <h4>Sobre nós</h4>
+                        <a href="./sobre.html"><p>Quem somos</p></a>
+                    </div>
+                    <div class="f-box-projetos">
+                        <h4>Parcerias</h4>
+                        <p>Contato</p>
+                    </div>
+                    <div class="f-box-social">
+                        <h4>Social</h4>
+                        <div class="logos">
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-snapchat" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>        
+    </div>
+
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
